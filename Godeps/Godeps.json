@@ -1,0 +1,29 @@
+{
+	"ImportPath": "bitbucket.org/michaelchandrag/chit",
+	"GoVersion": "go1.12",
+	"GodepVersion": "v80",
+	"Packages": [
+		"./..."
+	],
+	"Deps": [
+		{
+			"ImportPath": "github.com/gorilla/context",
+			"Comment": "v1.1.1-4-g8559d4a",
+			"Rev": "8559d4a6b87e4f517ec1846eb90a192b8748cc89"
+		},
+		{
+			"ImportPath": "github.com/gorilla/mux",
+			"Comment": "v1.7.3-1-gd83b6ff",
+			"Rev": "d83b6ffe499a29cc05fc977988d0392851779620"
+		},
+		{
+			"ImportPath": "gopkg.in/paytm/grace.v1",
+			"Rev": "edb50d497280c882cdc534dd0023997bced63ea7"
+		},
+		{
+			"ImportPath": "gopkg.in/tylerb/graceful.v1",
+			"Comment": "v1.2.15",
+			"Rev": "4654dfbb6ad53cb5e27f37d99b02e16c1872fbbb"
+		}
+	]
+}
