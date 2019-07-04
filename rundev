@@ -1,2 +1,0 @@
-#!/bin/bash
-./live -p 4000 -a 4001 $1 chit.go
