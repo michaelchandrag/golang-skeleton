@@ -2,7 +2,7 @@ package main
 
 import (
 	"log"
-	"fmt"
+	// "fmt"
 	"net/http"
 	"os"
 
@@ -11,7 +11,7 @@ import (
 
 	"gopkg.in/paytm/grace.v1"
 
-	// utilhttp "bitbucket.org/michaelchandrag/chit/pkg/util/http"
+	utilhttp "bitbucket.org/michaelchandrag/chit/pkg/util/http"
 	// util "bitbucket.org/michalechandrag/chit/pkg/util"
 )
 
@@ -40,12 +40,19 @@ func main() {
 
 func Articles(w http.ResponseWriter, r *http.Request) {
 	// vars := mux.Vars(r)
-	w.WriteHeader(http.StatusOK)
-	fmt.Fprintf(w, "Hello")
+	var (
+		apiObject *utilhttp.APIObject
+	)
+	
 	// r.Close = true
 	// w.Header().Set("Content-Type", "application/json")
 	// w.Header().Set("Access-Control-Allow-Origin", "*")
 
+	apiObject = &utilhttp.APIObject{
+		Type: "Test",
+	}
+
+	utilhttp.SendAPIObject(w, apiObject)
 	/*if r.Method == "OPTIONS" {
 		w.WriteHeader(http.StatusOK)
 		return
