@@ -25,7 +25,11 @@ func main() {
 	http.Handle("/", muxRouter)
 
 	// err = grace.Serve(":"+cfg.Server.Port, context.ClearHandler(http.DefaultServeMux))
-	err := grace.Serve(":9000", context.ClearHandler(http.DefaultServeMux))
+	port := os.Getenv("PORT")
+	if port == "" {
+	    port = "9000" // Default port if not specified
+	}
+	err := grace.Serve(":" + port, context.ClearHandler(http.DefaultServeMux))
 	if err != nil {
 		log.Println("[ERROR GRACEFUL]", err)
 		os.Exit(1)
